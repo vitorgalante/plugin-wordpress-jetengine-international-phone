@@ -170,6 +170,11 @@ Verifique se o script de utilitários está carregando corretamente. Abra o cons
 
 ## Changelog
 
+### 1.0.3
+- Corrigido hook de renderização para `jet-engine/forms/booking/field-template/{tipo}`
+- Campo agora recebe corretamente os dados ($args) do JetEngine
+- Formulário envia corretamente com o campo de telefone internacional
+
 ### 1.0.2
 - Corrigido hook de renderização do campo (`pre-render-field`)
 - Removida verificação desnecessária do módulo Forms Legacy
