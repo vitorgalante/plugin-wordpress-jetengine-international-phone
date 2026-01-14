@@ -1,0 +1,225 @@
+/**
+ * JetEngine International Phone Field - Frontend Styles
+ * 
+ * @package JetEngine_Intl_Phone_Field
+ * @version 1.0.0
+ */
+
+/* ==========================================================================
+   Wrapper do campo
+   ========================================================================== */
+.jeipf-field-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Input principal
+   ========================================================================== */
+.jeipf-phone-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ajusta o input quando intl-tel-input está ativo */
+.iti {
+    width: 100%;
+    display: block;
+}
+
+.iti__tel-input {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Dropdown de países
+   ========================================================================== */
+
+/* Garante que o dropdown apareça acima de outros elementos */
+.iti__dropdown {
+    z-index: 9999 !important;
+}
+
+.iti__country-container {
+    z-index: 10;
+}
+
+/* Ajusta altura máxima do dropdown */
+.iti__dropdown-content {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* Estilização da pesquisa de países */
+.iti__search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.iti__search-input:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+/* Lista de países */
+.iti__country-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.iti__country {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.iti__country:hover {
+    background-color: #f5f5f5;
+}
+
+.iti__country--highlight {
+    background-color: #e8f4fc;
+}
+
+.iti__flag-box {
+    margin-right: 8px;
+}
+
+.iti__country-name {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.iti__dial-code {
+    color: #666;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+/* Separador de países preferidos */
+.iti__divider {
+    border-top: 1px solid #ddd;
+    margin: 4px 0;
+}
+
+/* ==========================================================================
+   Código DDI separado
+   ========================================================================== */
+.iti--separate-dial-code .iti__selected-dial-code {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ==========================================================================
+   Mensagens de validação
+   ========================================================================== */
+.jeipf-validation-message {
+    margin-top: 5px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.jeipf-validation-message.jeipf-valid {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.jeipf-validation-message.jeipf-invalid {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* ==========================================================================
+   Estados do campo
+   ========================================================================== */
+
+/* Campo com erro */
+.jeipf-field-wrapper.jeipf-has-error .jeipf-phone-input {
+    border-color: #dc3545 !important;
+}
+
+/* Campo válido */
+.jeipf-field-wrapper.jeipf-is-valid .jeipf-phone-input {
+    border-color: #28a745 !important;
+}
+
+/* ==========================================================================
+   Compatibilidade com JetEngine Forms
+   ========================================================================== */
+.jet-form .jeipf-field-wrapper {
+    margin-bottom: 0;
+}
+
+.jet-form .iti {
+    margin-bottom: 0;
+}
+
+/* Ajusta z-index em modals/popups */
+.elementor-popup-modal .iti__dropdown,
+.jet-popup .iti__dropdown {
+    z-index: 100000 !important;
+}
+
+/* ==========================================================================
+   Responsivo
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .iti__dropdown-content {
+        max-height: 200px;
+    }
+    
+    .iti__country {
+        padding: 10px 12px;
+    }
+    
+    .iti__country-name {
+        font-size: 15px;
+    }
+}
+
+/* ==========================================================================
+   Dark mode (se suportado pelo tema)
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+    .iti__dropdown-content {
+        background-color: #2d2d2d;
+        border-color: #444;
+    }
+    
+    .iti__country:hover {
+        background-color: #3d3d3d;
+    }
+    
+    .iti__country--highlight {
+        background-color: #1e4a6d;
+    }
+    
+    .iti__country-name {
+        color: #e0e0e0;
+    }
+    
+    .iti__dial-code {
+        color: #aaa;
+    }
+    
+    .iti__search-input {
+        background-color: #3d3d3d;
+        border-color: #555;
+        color: #e0e0e0;
+    }
+}
