@@ -1,0 +1,218 @@
+/**
+ * JetFormBuilder International Phone Field - Admin Styles
+ *
+ * @package JFB_Intl_Tel
+ */
+
+/* Página de configurações */
+.jfb-intl-tel-settings {
+    max-width: 800px;
+}
+
+.jfb-intl-tel-settings h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.jfb-intl-tel-settings h1::before {
+    content: '📱';
+    font-size: 1.2em;
+}
+
+/* Form table */
+.jfb-intl-tel-settings .form-table th {
+    width: 200px;
+    padding: 20px 10px 20px 0;
+}
+
+.jfb-intl-tel-settings .form-table td {
+    padding: 15px 10px;
+}
+
+.jfb-intl-tel-settings .form-table input[type="text"] {
+    width: 300px;
+    max-width: 100%;
+}
+
+.jfb-intl-tel-settings .form-table select {
+    min-width: 250px;
+}
+
+/* Descrições */
+.jfb-intl-tel-settings .description {
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Seção de ajuda */
+.jfb-intl-tel-settings h2 {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.jfb-intl-tel-settings ol {
+    background: #f9f9f9;
+    padding: 15px 15px 15px 35px;
+    border-radius: 4px;
+    border-left: 4px solid #007bff;
+}
+
+.jfb-intl-tel-settings ol li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.jfb-intl-tel-settings code {
+    background: #e8e8e8;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Editor Gutenberg */
+.wp-block-jet-forms-intl-tel-field {
+    position: relative;
+}
+
+.wp-block-jet-forms-intl-tel-field .components-placeholder {
+    background: #f0f6fc;
+    border: 1px dashed #007bff;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.wp-block-jet-forms-intl-tel-field .components-placeholder__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+.wp-block-jet-forms-intl-tel-field .components-placeholder__label svg {
+    width: 24px;
+    height: 24px;
+    fill: #007bff;
+}
+
+/* Preview do campo no editor */
+.jfb-intl-tel-preview {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.jfb-intl-tel-preview__label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1e1e1e;
+}
+
+.jfb-intl-tel-preview__field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fafafa;
+}
+
+.jfb-intl-tel-preview__flag {
+    font-size: 20px;
+}
+
+.jfb-intl-tel-preview__code {
+    color: #666;
+    font-weight: 500;
+}
+
+.jfb-intl-tel-preview__input {
+    flex: 1;
+    color: #999;
+}
+
+/* Painel de configurações do bloco */
+.components-panel__body.jfb-intl-tel-settings-panel {
+    border-top: none;
+}
+
+.jfb-intl-tel-settings-panel .components-base-control {
+    margin-bottom: 16px;
+}
+
+.jfb-intl-tel-settings-panel .components-base-control__label {
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.jfb-intl-tel-settings-panel .components-base-control__help {
+    color: #757575;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Toggle controls */
+.jfb-intl-tel-settings-panel .components-toggle-control {
+    margin-bottom: 12px;
+}
+
+.jfb-intl-tel-settings-panel .components-toggle-control__label {
+    font-size: 13px;
+}
+
+/* Select controls */
+.jfb-intl-tel-settings-panel .components-select-control__input {
+    min-height: 36px;
+}
+
+/* Info box */
+.jfb-intl-tel-info-box {
+    background: #e8f4fc;
+    border-left: 4px solid #007bff;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.jfb-intl-tel-info-box p {
+    margin: 0;
+    font-size: 13px;
+    color: #0056b3;
+}
+
+/* Badge de versão */
+.jfb-intl-tel-version {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Responsivo */
+@media (max-width: 782px) {
+    .jfb-intl-tel-settings .form-table th {
+        width: 100%;
+        display: block;
+        padding-bottom: 5px;
+    }
+    
+    .jfb-intl-tel-settings .form-table td {
+        display: block;
+        padding-left: 0;
+    }
+    
+    .jfb-intl-tel-settings .form-table input[type="text"],
+    .jfb-intl-tel-settings .form-table select {
+        width: 100%;
+    }
+}
